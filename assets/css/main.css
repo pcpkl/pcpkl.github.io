@@ -1509,11 +1509,7 @@ section,
 
 .gallery .swiper-wrapper {
   height: auto;
-  
 }
-
-/* width: 1920px;
-  height: 780px; */
 
 .gallery .swiper-pagination {
   margin-top: 20px;
@@ -1544,7 +1540,7 @@ section,
 
   .gallery .swiper-slide-active {
     background: var(--background-color);
-    border: 0px solid var(--accent-color);
+    border: 6px solid var(--accent-color);
     padding: 4px;
     z-index: 1;
     transform: scale(1.2);
@@ -1652,9 +1648,22 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #f50000;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
 }
