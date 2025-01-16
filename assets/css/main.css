@@ -1648,9 +1648,22 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #f50000;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
 }
