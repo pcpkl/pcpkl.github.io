@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Bit Computer Pekalongan</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
@@ -77,51 +77,45 @@
   <main class="main">
 
     <!-- Hero Section -->
-   <section id="hero" class="hero section light-background">
-  <div class="container">
-    <div class="swiper init-swiper">
-      <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
-          "slidesPerView": 1,
-          "centeredSlides": true,
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          },
-          "breakpoints": {
-            "576": {
-              "slidesPerView": 1.2,
-              "spaceBetween": 20
-            },
-            "768": {
-              "slidesPerView": 1.5,
-              "spaceBetween": 30
-            },
-            "992": {
-              "slidesPerView": 2,
-              "spaceBetween": 40
-            }
-          }
-        }
-      </script>
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="img/beranda/gallery-1.jpg" class="img-fluid" alt="Cyber Security" loading="lazy">
-        </div>
-        <div class="swiper-slide">
-          <img src="img/beranda/gallery-2.png" class="img-fluid" alt="Data Protection" loading="lazy">
+    <section id="hero" class="hero section light-background">
+
+      <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "centeredSlides": true,
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 0
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/beranda/gallery-1.jpg"><img src="img/beranda/gallery-1.jpg" class="img-fluid" alt=""></a></div>
+              <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/beranda/gallery-2.png"><img src="img/beranda/gallery-2.png" class="img-fluid" alt=""></a></div>
+            
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
+
+    </section><!-- /Hero Section -->
 
     <!-- Menu Section -->
     <section id="menu" class="menu section">
