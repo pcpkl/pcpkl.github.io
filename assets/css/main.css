@@ -1724,7 +1724,47 @@ section,
   }
 }
 
+/* Custom Swiper Responsive Styles */
+.hero .swiper.init-swiper {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
 
+.hero .swiper-slide {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.hero .swiper-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+  .hero .swiper-slide {
+    padding: 0 5px;
+  }
+  
+  .hero .swiper-slide img {
+    max-height: 50vh;
+    object-fit: contain;
+  }
+  
+  .hero .swiper-pagination {
+    bottom: 10px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero .swiper-slide img {
+    max-height: 40vh;
+  }
+}
 
 /*--------------------------------------------------------------
 # Starter Section Section
