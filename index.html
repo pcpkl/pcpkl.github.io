@@ -34,6 +34,127 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+ <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 1200px;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: auto;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #333;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        #prevBtn {
+            left: 20px;
+        }
+
+        #nextBtn {
+            right: 20px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .indicator.active {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .carousel-btn {
+                padding: 10px;
+                font-size: 16px;
+            }
+            
+            .indicator {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-btn {
+                padding: 8px;
+                font-size: 14px;
+            }
+            
+            .indicator {
+                width: 8px;
+                height: 8px;
+            }
+        }
+    </style>
+  
 </head>
 
 <body class="index-page">
@@ -77,43 +198,125 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section light-background" style="padding: 0;">
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "centeredSlides": true,
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 0
-                  }
-                }
-              }
-            </script>
-            <div class="swiper-wrapper align-items-center">
-              <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/beranda/gallery-1.jpg"><img src="img/beranda/gallery-1.jpg" class="img-fluid" alt=""></a></div>
-              <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/beranda/gallery-2.png"><img src="img/beranda/gallery-2.png" class="img-fluid" alt=""></a></div>
-            
+    
+   <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="gallery-1.jpg" alt="Gallery Image 1">
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
+            <div class="carousel-slide">
+                <img src="gallery-2.png" alt="Gallery Image 2">
+            </div>
         </div>
+        
+        <button class="carousel-btn" id="prevBtn">&#10094;</button>
+        <button class="carousel-btn" id="nextBtn">&#10095;</button>
+        
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+        </div>
+    </div>
 
-    </section><!-- /Hero Section -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carousel');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+            let slideInterval;
+            
+            function updateCarousel() {
+                carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+            
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateCarousel();
+            }
+            
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateCarousel();
+            }
+            
+            function startAutoSlide() {
+                slideInterval = setInterval(nextSlide, 2000);
+            }
+            
+            // Initialize carousel
+            updateCarousel();
+            startAutoSlide();
+            
+            // Button click events
+            nextBtn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                nextSlide();
+                startAutoSlide();
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                prevSlide();
+                startAutoSlide();
+            });
+            
+            // Indicator click events
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    currentIndex = index;
+                    updateCarousel();
+                    startAutoSlide();
+                });
+            });
+            
+            // Pause on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            carouselContainer.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            carouselContainer.addEventListener('mouseleave', startAutoSlide);
+            
+            // Touch support for mobile devices
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            carouselContainer.addEventListener('touchstart', (e) => {
+                clearInterval(slideInterval);
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+            
+            carouselContainer.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+                startAutoSlide();
+            }, {passive: true});
+            
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) {
+                    nextSlide(); // Swipe left
+                }
+                if (touchEndX > touchStartX + 50) {
+                    prevSlide(); // Swipe right
+                }
+            }
+        });
+    </script>
 
     <!-- Menu Section -->
     <section id="menu" class="menu section">
