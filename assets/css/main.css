@@ -798,9 +798,9 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 60vh;
+  min-height: auto; /* Ubah dari 60vh ke auto */
   position: relative;
-  padding: 60px 0;
+  padding: 0; /* Ubah dari 60px 0 ke 0 */
   display: flex;
   align-items: center;
 }
