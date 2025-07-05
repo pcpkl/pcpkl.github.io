@@ -1649,6 +1649,82 @@ section,
 }
 
 
+/*--------------------------------------------------------------
+# Custom Swiper Slider Styles
+--------------------------------------------------------------*/
+.swiper.init-swiper {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .swiper-slide img {
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide img {
+    max-height: 50vh;
+  }
+  
+  .swiper.init-swiper {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper-slide img {
+    max-height: 40vh;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Starter Section Section
