@@ -805,6 +805,121 @@ section,
   align-items: center;
 }
 
+/* Custom Carousel Styles */
+.custom-carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.custom-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.custom-carousel-slide {
+  min-width: 100%;
+  height: auto;
+}
+
+.custom-carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.custom-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.custom-carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#custom-prevBtn {
+  left: 20px;
+}
+
+#custom-nextBtn {
+  right: 20px;
+}
+
+.custom-carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.custom-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-indicator.active {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 0;
+  }
+  
+  .custom-carousel-slide img {
+    height: 50vh; /* Atur tinggi gambar untuk mobile */
+    object-fit: cover;
+  }
+  
+  .custom-carousel-btn {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .custom-indicator {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-carousel-slide img {
+    height: 40vh; /* Lebih kecil untuk device yang sangat kecil */
+  }
+  
+  .custom-carousel-btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .custom-indicator {
+    width: 8px;
+    height: 8px;
+  }
+}
+
 .hero h1 {
   margin: 0;
   font-size: 64px;
