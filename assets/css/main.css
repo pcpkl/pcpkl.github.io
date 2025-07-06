@@ -1763,6 +1763,11 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+.comp-text {
+  font-size: 16px; /* Ukuran lebih kecil untuk "Comp" */
+  margin-left: 5px; /* Jarak antara "Bit" dan "Comp" */
+}
+
 
 
 /*--------------------------------------------------------------
