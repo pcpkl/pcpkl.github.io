@@ -24,8 +24,97 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Additional CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      width: 250px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .card img {
+      max-width: 200px;
+      height: 150px;
+    }
+    .badge {
+      background-color: #ff0000;
+      color: #fff;
+      font-size: 12px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .favorite {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #ff0000;
+      font-size: 20px;
+    }
+    .product-title {
+      font-size: 14px;
+      color: #888;
+      margin: 10px 0 5px;
+    }
+    .product-name {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    .product-price {
+      font-size: 16px;
+      color: #000;
+      margin: 5px 0;
+    }
+    .buy-button {
+      background-color: #ff0000;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 14px;
+    }
+    .header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .header select {
+      padding: 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: Yummy
@@ -72,159 +161,62 @@
   </header>
 
   <main class="main">
-
-
-       <head>
-         <meta charset="utf-8"/>
-         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-      
-         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-         <style>
-          body {
-                   font-family: Arial, sans-serif;
-                   background-color: #f8f9fa;
-                   margin: 0;
-                   padding: 0;
-               }
-               .container {
-                   display: flex;
-                   flex-wrap: wrap;
-                   justify-content: center;
-                   padding: 20px;
-               }
-               .card {
-                   background-color: #fff;
-                   border: 1px solid #e0e0e0;
-                   border-radius: 10px;
-                   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                   margin: 10px;
-                   width: 250px;
-                   padding: 20px;
-                   text-align: center;
-                   position: relative;
-               }
-               .card img {
-                   max-width: 200px;
-                   height: 150px;
-               }
-               .badge {
-                   background-color: #ff0000;
-                   color: #fff;
-                   font-size: 12px;
-                   padding: 5px 10px;
-                   border-radius: 5px;
-                   position: absolute;
-                   top: 10px;
-                   left: 10px;
-               }
-               .favorite {
-                   position: absolute;
-                   top: 10px;
-                   right: 10px;
-                   color: #ff0000;
-                   font-size: 20px;
-               }
-               .product-title {
-                   font-size: 14px;
-                   color: #888;
-                   margin: 10px 0 5px;
-               }
-               .product-name {
-                   font-size: 16px;
-                   font-weight: bold;
-                   margin: 5px 0;
-               }
-               .product-price {
-                   font-size: 16px;
-                   color: #000;
-                   margin: 5px 0;
-               }
-               .buy-button {
-                   background-color: #ff0000;
-                   color: #fff;
-                   padding: 10px;
-                   border: none;
-                   border-radius: 5px;
-                   cursor: pointer;
-                   width: 100%;
-                   font-size: 14px;
-               }
-               .header {
-                   display: flex;
-                   justify-content: flex-end;
-                   align-items: center;
-                   padding: 20px;
-                   background-color: #fff;
-                   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-               }
-               .header select {
-                   padding: 10px;
-                   border: 1px solid #e0e0e0;
-                   border-radius: 5px;
-                   font-size: 14px;
-               }
-         </style>
-        </head>
-        <body>
-         <div class="header">
-            <label for="sort">
-            Brand   :
-            </label>
-            <select id="sort" onchange="location = this.value;">
-              <option value="acer.html">Acer</option>
-              <option value="hp.html">HP</option>
-              <option value="lenovo.html">Lenovo</option>
-              <option value="asus.html">Asus</option>
-              <option value="advan.html">Advan</option>
-              <option value="axioo.html">Axioo</option>
-              <option value="all.html">Semua Brand</option>
-            </select>
-         </div>
-         <div class="container">
-          <div class="card">
-           <div class="badge">Termurah</div>
-           <img alt="" src="img/all/acern100.png"/>           
-           <div class="product-name">ACER ASPIRE LITE</div>
-           <div class="product-title">Intel N100</div>
-           <div class="product-price">Rp. 5,xxx,xxx</div>
-           <a class="buy-button" href="detail_product.html">Klik Details</a>
-          </div>
-          <div class="card">
-            <div class="badge"></div>
-            <img alt="" src="img/all/acerr3.jpg"/>           
-            <div class="product-name">ACER ASPIRE LITE</div>
-            <div class="product-title">Amd Ryzen 3 7320</div>
-            <div class="product-price">Rp. 6,xxx,xxx</div>
-            <a class="buy-button" href="detail_product.html">Klik Details</a>
-           </div>
-          <div class="card">
-            <div class="badge"></div>
-            <img alt="" src="img/all/acern100.png"/>           
-            <div class="product-name">ACER ASPIRE LITE</div>
-            <div class="product-title">Intel Core I3-1215u</div>
-            <div class="product-price">Rp. 6,xxx,xxx</div>
-            <a class="buy-button" href="detail_product.html">Klik Details</a>
-           </div>
-           <div class="card">
-            <div class="badge"></div>
-            <img alt="" src="img/all/acern100.png"/>           
-            <div class="product-name">ACER ASPIRE LITE</div>
-            <div class="product-title">Intel Core I5-1215u</div>
-            <div class="product-price">Rp. 8,xxx,xxx</div>
-            <a class="buy-button" href="detail_product.html">Klik Details</a>
-           </div>
-           <div class="card">
-            <div class="badge">GAMING</div>
-            <img alt="" src="img/all/acernitro.png"/>           
-            <div class="product-name">ACER NITRO</div>
-            <div class="product-title">Intel Core I5-13420</div>
-            <div class="product-price">Rp. 14,xxx,xxx</div>
-            <a class="buy-button" href="detail_product.html">Klik Details</a>
-           </div>
-          
-           
-         </div>
-        </body>
+    <div class="header">
+      <label for="sort">
+      Brand   :
+      </label>
+      <select id="sort" onchange="location = this.value;">
+        <option value="acer.html">Acer</option>
+        <option value="hp.html">HP</option>
+        <option value="lenovo.html">Lenovo</option>
+        <option value="asus.html">Asus</option>
+        <option value="advan.html">Advan</option>
+        <option value="axioo.html">Axioo</option>
+        <option value="all.html">Semua Brand</option>
+      </select>
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="badge">Termurah</div>
+        <img alt="" src="img/all/acern100.png"/>           
+        <div class="product-name">ACER ASPIRE LITE</div>
+        <div class="product-title">Intel N100</div>
+        <div class="product-price">Rp. 5,xxx,xxx</div>
+        <a class="buy-button" href="detail_product.html">Klik Details</a>
+      </div>
+      <div class="card">
+        <div class="badge"></div>
+        <img alt="" src="img/all/acerr3.jpg"/>           
+        <div class="product-name">ACER ASPIRE LITE</div>
+        <div class="product-title">Amd Ryzen 3 7320</div>
+        <div class="product-price">Rp. 6,xxx,xxx</div>
+        <a class="buy-button" href="detail_product.html">Klik Details</a>
+      </div>
+      <div class="card">
+        <div class="badge"></div>
+        <img alt="" src="img/all/acern100.png"/>           
+        <div class="product-name">ACER ASPIRE LITE</div>
+        <div class="product-title">Intel Core I3-1215u</div>
+        <div class="product-price">Rp. 6,xxx,xxx</div>
+        <a class="buy-button" href="detail_product.html">Klik Details</a>
+      </div>
+      <div class="card">
+        <div class="badge"></div>
+        <img alt="" src="img/all/acern100.png"/>           
+        <div class="product-name">ACER ASPIRE LITE</div>
+        <div class="product-title">Intel Core I5-1215u</div>
+        <div class="product-price">Rp. 8,xxx,xxx</div>
+        <a class="buy-button" href="detail_product.html">Klik Details</a>
+      </div>
+      <div class="card">
+        <div class="badge">GAMING</div>
+        <img alt="" src="img/all/acernitro.png"/>           
+        <div class="product-name">ACER NITRO</div>
+        <div class="product-title">Intel Core I5-13420</div>
+        <div class="product-price">Rp. 14,xxx,xxx</div>
+        <a class="buy-button" href="detail_product.html">Klik Details</a>
+      </div>
+    </div>
   </main>
   <footer id="footer" class="footer dark-background">
     <div class="container">
@@ -308,6 +300,5 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   
-  </body>
-  
-  </html>
+</body>
+</html>
