@@ -4,8 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Bit Computer Pekalongan - Laptop Second & Spare Part</title>
-  <meta name="description" content="Daftar Laptop Second dan Spare Part Aksesoris Berkualitas dari Bit Computer Pekalongan">
+  <title>Bit Computer Pekalongan</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
   <!-- Favicons -->
   <link href="assets/img/bitlogo.png" rel="icon">
@@ -26,484 +27,107 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Carousel Custom CSS -->
   <style>
-    /* ========================================
-       STYLE KHUSUS LAPTOP SECOND (selain header)
-       ======================================== */
-
-    /* Hero Section */
-    .hero-second {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      padding: 60px 0;
-    }
-
-    .hero-second h2 {
-      color: #ff6b6b;
-      font-size: 2.5rem;
-    }
-
-    .hero-second .lead {
-      color: rgba(255, 255, 255, 0.85);
-    }
-
-    /* Button Styles */
-    .btn-second {
-      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-      border: none;
-      color: white;
-      border-radius: 30px;
-      padding: 10px 25px;
-      font-weight: 500;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-second:hover {
-      background: linear-gradient(135deg, #ee5a24 0%, #ff4757 100%);
-      transform: translateY(-2px);
-      color: white;
-    }
-
-    .btn-part {
-      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-      border: none;
-      color: white;
-      border-radius: 30px;
-      padding: 10px 25px;
-      font-weight: 500;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .btn-part:hover {
-      background: linear-gradient(135deg, #2980b9 0%, #1a6fa0 100%);
-      transform: translateY(-2px);
-      color: white;
-    }
-
-    /* Filter Button */
-    .filter-btn {
-      margin: 5px 8px;
-      border-radius: 40px;
-      padding: 8px 22px;
-      font-size: 14px;
-      font-weight: 500;
-      border: 2px solid #e9ecef;
-      background: white;
-      color: #495057;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .filter-btn:hover {
-      transform: translateY(-3px);
-      border-color: #ff6b6b;
-      color: #ff6b6b;
-    }
-
-    .filter-btn.active-filter {
-      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-      color: white;
-      border-color: transparent;
-    }
-
-    /* Card Product */
-    .menu-item {
-      position: relative;
-      background: white;
-      border-radius: 16px;
-      padding: 15px;
-      margin-bottom: 40px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s;
-      height: 100%;
-    }
-
-    .menu-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-    }
-
-    .row-products {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 -12px;
-    }
-
-    .col-product {
-      padding: 0 12px;
-      margin-bottom: 20px;
-    }
-
-    .badge-second {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-      color: white;
-      padding: 5px 12px;
-      border-radius: 30px;
-      font-size: 11px;
-      font-weight: bold;
-      z-index: 5;
-    }
-
-    .badge-part {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-      color: white;
-      padding: 5px 12px;
-      border-radius: 30px;
-      font-size: 11px;
-      font-weight: bold;
-      z-index: 5;
-    }
-
-    /* Gallery Thumbnails - Hanya untuk Laptop */
-    .gallery-thumbnails {
-      display: flex;
-      gap: 8px;
-      margin-top: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .gallery-thumb {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: all 0.2s;
-    }
-
-    .gallery-thumb:hover {
-      border-color: #ff6b6b;
-      transform: scale(1.05);
-    }
-
-    .product-img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .product-img:hover {
-      transform: scale(1.02);
-    }
-
-    .old-price {
-      text-decoration: line-through;
-      color: #adb5bd;
-      font-size: 13px;
-      margin-right: 8px;
-    }
-
-    .price-second {
-      color: #e83e3e;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .price-part {
-      color: #2980b9;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .btn-detail {
-      display: inline-block;
-      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-      color: white;
-      padding: 8px 20px;
-      border-radius: 30px;
-      font-size: 13px;
-      text-decoration: none;
-      margin-top: 5px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .btn-detail:hover {
-      background: linear-gradient(135deg, #ee5a24 0%, #ff4757 100%);
-      color: white;
-    }
-
-    /* Section Title */
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .section-title h3 {
-      font-size: 28px;
-      font-weight: 700;
-    }
-
-    .section-title .red-text {
-      color: #ff6b6b;
-    }
-
-    .section-title .blue-text {
-      color: #3498db;
-    }
-
-    /* Spare Part Section */
-    .spare-section {
-      background: #f0f4f8;
-      padding: 60px 0;
-      margin-top: 40px;
-    }
-
-    /* Carousel */
-    .carousel-container {
+    /* Custom Carousel Styles */
+    .custom-carousel-container {
       position: relative;
       width: 100%;
       overflow: hidden;
-      border-radius: 20px;
+      margin: 0 auto;
     }
 
-    .carousel-slide {
+    .custom-carousel {
       display: flex;
-      transition: transform 0.5s ease;
+      transition: transform 0.5s ease-in-out;
+      height: 100%;
     }
 
-    .carousel-slide img {
-      width: 100%;
+    .custom-carousel-slide {
       min-width: 100%;
-      border-radius: 20px;
+      height: auto;
     }
 
-    .carousel-btn {
+    .custom-carousel-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .custom-carousel-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(255,255,255,0.8);
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #333;
       border: none;
-      padding: 10px 15px;
-      border-radius: 50%;
+      padding: 15px;
       cursor: pointer;
       font-size: 18px;
-    }
-
-    .carousel-prev { left: 15px; }
-    .carousel-next { right: 15px; }
-
-    /* Lightbox Gallery - UKURAN MAKSIMAL & THUMBNAIL HORIZONTAL */
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.95);
-      z-index: 2000;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .lightbox.active {
-      display: flex;
-      opacity: 1;
-    }
-
-    .lightbox-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lightbox-img {
-      max-width: 95%;
-      max-height: 80vh;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      border-radius: 8px;
-      box-shadow: 0 5px 30px rgba(0,0,0,0.5);
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      background: rgba(255,255,255,0.2);
-      color: white;
-      width: 45px;
-      height: 45px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      cursor: pointer;
-      transition: all 0.3s;
-      border: none;
       z-index: 10;
+      transition: all 0.3s ease;
     }
 
-    .lightbox-close:hover {
-      background: #ff6b6b;
-      transform: rotate(90deg);
+    .custom-carousel-btn:hover {
+      background-color: rgba(255, 255, 255, 0.9);
     }
 
-    .lightbox-prev, .lightbox-next {
+    #custom-prevBtn {
+      left: 20px;
+    }
+
+    #custom-nextBtn {
+      right: 20px;
+    }
+
+    .custom-carousel-indicators {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.2);
-      color: white;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      cursor: pointer;
-      transition: all 0.3s;
-      border: none;
-      z-index: 10;
-    }
-
-    .lightbox-prev:hover, .lightbox-next:hover {
-      background: #ff6b6b;
-      transform: translateY(-50%) scale(1.1);
-    }
-
-    .lightbox-prev { left: 20px; }
-    .lightbox-next { right: 20px; }
-
-    .lightbox-counter {
-      position: absolute;
-      bottom: 80px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      background: rgba(0,0,0,0.6);
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-size: 14px;
-      z-index: 10;
-    }
-
-    /* THUMBNAIL HORIZONTAL - MEMANJANG DARI KIRI KE KANAN, UKURAN LEBIH KECIL */
-    .lightbox-thumbnails {
-      position: fixed;
-      bottom: 15px;
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
-      gap: 8px;
-      background: rgba(0,0,0,0.6);
-      padding: 10px 15px;
-      border-radius: 50px;
-      overflow-x: auto;
-      overflow-y: hidden;
-      max-width: 90%;
-      white-space: nowrap;
+      gap: 10px;
       z-index: 10;
-      scrollbar-width: thin;
-      -webkit-overflow-scrolling: touch;
     }
 
-    .lightbox-thumbnails::-webkit-scrollbar {
-      height: 3px;
-    }
-
-    .lightbox-thumbnails::-webkit-scrollbar-track {
-      background: rgba(255,255,255,0.2);
-      border-radius: 10px;
-    }
-
-    .lightbox-thumbnails::-webkit-scrollbar-thumb {
-      background: #ff6b6b;
-      border-radius: 10px;
-    }
-
-    .lightbox-thumb {
-      width: 45px;
-      height: 45px;
-      object-fit: cover;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: all 0.2s;
-      flex-shrink: 0;
-    }
-
-    .lightbox-thumb:hover, .lightbox-thumb.active-thumb {
-      border-color: #ff6b6b;
-      transform: scale(1.05);
-    }
-
-    .scroll-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #ff6b6b;
-      color: white;
-      width: 45px;
-      height: 45px;
+    .custom-indicator {
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      z-index: 99;
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.3s;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    .scroll-top.show {
-      opacity: 1;
-      visibility: visible;
+    .custom-indicator.active {
+      background-color: rgba(255, 255, 255, 0.9);
     }
 
-    /* Responsive Grid */
-    @media (min-width: 992px) {
-      .col-product { width: 25%; padding: 0 12px; margin-bottom: 30px; }
-    }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .col-product { width: 33.333%; padding: 0 12px; margin-bottom: 30px; }
-    }
-    @media (max-width: 767px) {
-      .col-product { width: 50%; padding: 0 10px; margin-bottom: 20px; }
-      .menu-item { padding: 12px; margin-bottom: 25px; }
-      .menu-item h4 { font-size: 13px; }
-      .ingredients { font-size: 10px; }
-      .price-second, .price-part { font-size: 13px; }
-      .old-price { font-size: 10px; }
-      .btn-detail { padding: 6px 12px; font-size: 10px; margin-top: 4px; }
-      .badge-second, .badge-part { font-size: 8px; padding: 3px 6px; }
-      .gallery-thumb { width: 45px; height: 45px; }
-      .section-title { margin-bottom: 35px; }
-      .section-title h3 { font-size: 22px; }
-      .filter-btn { padding: 5px 12px; font-size: 11px; margin: 3px; }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .custom-carousel-btn {
+        padding: 10px;
+        font-size: 16px;
+      }
       
-      .lightbox-prev, .lightbox-next { width: 40px; height: 40px; font-size: 20px; }
-      .lightbox-close { top: 10px; right: 15px; width: 40px; height: 40px; font-size: 24px; }
-      .lightbox-thumb { width: 35px; height: 35px; }
-      .lightbox-counter { bottom: 65px; font-size: 12px; }
+      .custom-indicator {
+        width: 10px;
+        height: 10px;
+      }
     }
+
     @media (max-width: 480px) {
-      .col-product { width: 50%; padding: 0 8px; margin-bottom: 15px; }
-      .gallery-thumb { width: 38px; height: 38px; }
-      .menu-item { padding: 10px; margin-bottom: 20px; }
-      .lightbox-thumb { width: 30px; height: 30px; }
+      .custom-carousel-btn {
+        padding: 8px;
+        font-size: 14px;
+      }
+      
+      .custom-indicator {
+        width: 8px;
+        height: 8px;
+      }
     }
   </style>
 
@@ -518,23 +142,34 @@
 
 <body class="index-page">
 
-  <!-- HEADER MENGIKUTI INDEX.HTML -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Bit</h1>
         <span>Com</span>
-        <span style="background: #ff6b6b; padding: 2px 8px; border-radius: 20px; font-size: 12px; margin-left: 8px; color: white;">Second</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#home" class="active">Beranda</a></li>
-          <li><a href="#laptop">Laptop Second</a></li>
-          <li><a href="#sparepart">Spare Part</a></li>
+          <li><a href="#hero" class="active">Beranda<br></a></li>
+          <!-- <li><a href="#about">About</a></li> -->
+          <li><a href="#menu">Produk Terlaris</a></li>
+          <li class="dropdown"><a href="#"><span>Brand</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="all.html">Semua Brand</a></li>
+              <li><a href="lenovo.html">Lenovo</a></li>
+              <li><a href="asus.html">Asus</a></li>
+              <li><a href="hp.html">HP</a></li>
+              <li><a href="acer.html">Acer</a></li>
+              <li><a href="advan.html">Advan</a></li>
+              <li><a href="axioo.html">Axioo</a></li>
+            </ul>
+          </li>
           <li><a href="#footer">Kontak</a></li>
-          <li><a href="index.html">Kembali ke Beranda</a></li>
+          <li><a href="second.html" target="_blank">Tanya Laptop Second</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -544,458 +179,567 @@
     </div>
   </header>
 
-  <main>
-    <section id="home" class="hero-second">
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h2>Laptop Second <span style="color: #ff6b6b;">Berkualitas</span></h2>
-            <p class="lead">Dapatkan laptop second terbaik dengan harga terjangkau, kondisi prima. Semua unit telah melalui pengecekan ketat oleh teknisi profesional.</p>
-            <a href="#laptop" class="btn-second mt-3 d-inline-block">Lihat Koleksi →</a>
-          </div>
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="carousel-container">
-              <div class="carousel-slide" id="heroCarousel">
-                <img src="img/beranda/gallery-1.jpg" alt="Slide 1">
-                <img src="img/beranda/gallery-2.png" alt="Slide 2">
-                <img src="https://placehold.co/600x400/ff4757/white?text=Free+Antar" alt="Slide 3">
-              </div>
-              <button class="carousel-btn carousel-prev" onclick="prevSlide()">❮</button>
-              <button class="carousel-btn carousel-next" onclick="nextSlide()">❯</button>
+        <div class="custom-carousel-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="custom-carousel">
+            <div class="custom-carousel-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="img/beranda/gallery-1.jpg">
+                <img src="img/beranda/gallery-1.jpg" class="img-fluid" alt="Gallery Image 1">
+              </a>
+            </div>
+            <div class="custom-carousel-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="img/beranda/gallery-2.png">
+                <img src="img/beranda/gallery-2.png" class="img-fluid" alt="Gallery Image 2">
+              </a>
             </div>
           </div>
+          
+          <button class="custom-carousel-btn" id="custom-prevBtn">&#10094;</button>
+          <button class="custom-carousel-btn" id="custom-nextBtn">&#10095;</button>
+          
+          <div class="custom-carousel-indicators">
+            <span class="custom-indicator active"></span>
+            <span class="custom-indicator"></span>
+          </div>
         </div>
       </div>
-    </section>
+    </section><!-- /Hero Section -->
 
-    <section id="laptop" class="container" style="padding: 60px 15px;">
-      <div class="section-title">
-        <h3>Pilihan <span class="red-text">Laptop Second</span></h3>
-        <p>Kondisi 90% - 95% | Free Antar Pekalongan</p>
-      </div>
-      <div class="text-center mb-5">
-        <button class="filter-btn active-filter" data-filter="all">Semua Brand</button>
-        <button class="filter-btn" data-filter="lenovo">Lenovo</button>
-        <button class="filter-btn" data-filter="asus">Asus</button>
-        <button class="filter-btn" data-filter="hp">HP</button>
-        <button class="filter-btn" data-filter="acer">Acer</button>
-        <button class="filter-btn" data-filter="advan">Advan</button>
-        <button class="filter-btn" data-filter="axioo">Axioo</button>
-      </div>
-      <div class="row-products" id="productList"></div>
-      <div class="text-center mt-5">
-        <a href="https://wa.me/6285117571767" class="btn-second">Hubungi Tim Sales →</a>
-      </div>
-    </section>
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
 
-    <section id="sparepart" class="spare-section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <!-- <h2>Our Menu</h2> -->
+        <p><span>Brand</span> <span class="description-title">Best Seller</span></p>
+      </div><!-- End Section  Title -->
+
       <div class="container">
-        <div class="section-title">
-          <h3>Aksesoris & <span class="blue-text">Spare Part</span></h3>
-          <p>Charger | RAM | SSD | Baterai | Keyboard | Fan | Dan Lain-lain</p>
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+              <h4>Lenovo</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+              <h4>Asus</h4>
+            </a><!-- End tab nav item -->
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
+              <h4>HP</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
+              <h4>Acer</h4>
+            </a>
+          </li><!-- End tab nav item -->
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-advan">
+              <h4>Advan</h4>
+            </a>
+          </li><!-- End tab nav item -->
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-axioo">
+              <h4>Axioo</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="menu-starters">
+
+            <div class="tab-header text-center">
+              <!-- <p>Menu</p> -->
+              <h3>LENOVO</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/product/ip1_1.png" class="glightbox"><img src="img/product/ip1_1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Ideapad Slim 1</h4>
+                <p class="ingredients">
+                  Intel N4020, Ram 8Gb, Ssd 256Gb
+                </p>
+                <p class="price">
+                  Rp 4.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="detlen1.html">Klik Details</a></p>
+              </div><!-- Menu Item -->
+              
+              <div class="col-lg-4 menu-item">
+                <a href="img/product/ip3_2.png" class="glightbox"><img src="img/product/ip3_2.png" class="menu-img img-fluid" alt=""></a>
+                <h4>Ideapad Slim 3i</h4>
+                <p class="ingredients">
+                  Intel i3-1215u, Ram 8Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 6.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/product/ip3_3.jpg" class="glightbox"><img src="img/product/ip3_3.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>Ideapad Slim 3i</h4>
+                <p class="ingredients">
+                  Amd Ryzen 3 7350, Ram 8Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 6.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="detail_product.html">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+
+            </div>
+          </div><!-- End Starter Menu Content -->
+
+          <div class="tab-pane fade" id="menu-breakfast">
+
+            <div class="tab-header text-center">
+              <h3>ASUS</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/product/vivobook_1.png" class="glightbox"><img src="img/product/vivobook_1.png" class="menu-img img-fluid" alt=""></a>
+                <h4>ASUS VIVOBOOK GO 14 E410KA</h4>
+                <p class="ingredients">
+                  Intel N4500, Ram 8Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 5.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/product/vivobook_2.jpg" class="glightbox"><img src="img/product/vivobook_2.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>ASUS VIVOBOOK GO 14 E1404FA</h4>
+                <p class="ingredients">
+                  Amd Ryzen 3 7350, Ram 8Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 6.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/product/vivobook_3.png" class="glightbox"><img src="img/product/vivobook_3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>ASUS VIVOBOOK 14 A1404VA</h4>
+                <p class="ingredients">
+                  Intel I3 1315U, Ram 8Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 7.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="detail_product.html">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Breakfast Menu Content -->
+
+          <div class="tab-pane fade" id="menu-lunch">
+
+            <div class="tab-header text-center">
+              <h3>HP</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/hpdq3888.jpg" class="glightbox"><img src="img/all/hpdq3888.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>HP DQ3888TU</h4>
+                <p class="ingredients">
+                  Intel N4500, Ram 4Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 5.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/hp245g10.png" class="glightbox"><img src="img/all/hp245g10.png" class="menu-img img-fluid" alt=""></a>
+                <h4>HP 245 G10</h4>
+                <p class="ingredients">
+                  Amd Ryzen 3 7350, Ram 8Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 5.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/hpdq5115.png" class="glightbox"><img src="img/all/hpdq5115.png" class="menu-img img-fluid" alt=""></a>
+                <h4>HP DQ5115TU</h4>
+                <p class="ingredients">
+                  Intel I3 1315U, Ram 4Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 6.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="detail_product.html">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Lunch Menu Content -->
+
+          <div class="tab-pane fade" id="menu-dinner">
+
+            <div class="tab-header text-center">
+              <h3>ACER</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/acern100.png" class="glightbox"><img src="img/all/acern100.png" class="menu-img img-fluid" alt=""></a>
+                <h4>ACER ASPIRE LITE</h4>
+                <p class="ingredients">
+                  Intel N100, Ram 8Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 5.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/acerr3.jpg" class="glightbox"><img src="img/all/acerr3.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>ACER ASPIRE LITE</h4>
+                <p class="ingredients">
+                  Amd Ryzen 3 7350, Ram 8Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 5.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/acern100.png" class="glightbox"><img src="img/all/acern100.png" class="menu-img img-fluid" alt=""></a>
+                <h4>HP DQ5115TU</h4>
+                <p class="ingredients">
+                  Intel I3 1315U, Ram 8Gb, Ssd 512Gb
+                </p>
+                <p class="price">
+                  Rp 6.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="detail_product.html">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Dinner Menu Content -->
+         
+          <div class="tab-pane fade" id="menu-advan">
+
+            <div class="tab-header text-center">
+              <h3>ADVAN</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/advansoulmate.jpg" class="glightbox"><img src="img/all/advansoulmate.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>ADVAN SOULMATE</h4>
+                <p class="ingredients">
+                  Intel N4020, Ram 4Gb, Ssd 128Gb
+                </p>
+                <p class="price">
+                  Rp 2.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/advansoulmateplus.jpg" class="glightbox"><img src="img/all/advansoulmateplus.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>ADVAN SOULMATE PLUS</h4>
+                <p class="ingredients">
+                  Amd Ryzen 5 3500, Ram 8Gb, Ssd 256Gb
+                </p>
+                <p class="price">
+                  Rp 4.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/advanworkpro.jpg" class="glightbox"><img src="img/all/advanworkpro.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>ADVAN WORKPRO LITE</h4>
+                <p class="ingredients">
+                  Intel I3 1315U, Ram 8Gb, Ssd 256Gb
+                </p>
+                <p class="price">
+                  Rp 5.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="detail_product.html">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Lunch Menu Content -->
+
+          
+          <div class="tab-pane fade" id="menu-axioo">
+
+            <div class="tab-header text-center">
+              <h3>AXIOO</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/axioohype10.png" class="glightbox"><img src="img/all/axioohype10.png" class="menu-img img-fluid" alt=""></a>
+                <h4>AXIOO HYPE 1</h4>
+                <p class="ingredients">
+                  Intel N4020, Ram 4Gb, Ssd 128Gb
+                </p>
+                <p class="price">
+                  Rp 2.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/axioohype10.png" class="glightbox"><img src="img/all/axioohype10.png" class="menu-img img-fluid" alt=""></a>
+                <h4>AXIOO HYPE 10</h4>
+                <p class="ingredients">
+                  Intel N4020, Ram 4Gb, Ssd 128Gb
+                </p>
+                <p class="price">
+                  Rp 2.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="#">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="img/all/axioohype5x3.png" class="glightbox"><img src="img/all/axioohype5x3.png" class="menu-img img-fluid" alt=""></a>
+                <h4>AXIOO HYPE 5 AMD X3</h4>
+                <p class="ingredients">
+                  Amd Ryzen 5 3500, Ram 8Gb, Ssd 256Gb
+                </p>
+                <p class="price">
+                  Rp 5.xxx.xxx
+                </p>
+                <p class="btn-getstarted"><a href="detail_product.html">Klik Details</a></p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Lunch Menu Content -->
+
         </div>
-        <div class="row-products" id="sparepartList"></div>
-        <div class="text-center mt-5">
-          <a href="https://wa.me/6285117571767" class="btn-part">Tanya Ketersediaan →</a>
-        </div>
+
+        <a href="all.html"><button type="button" class="block"><font color="white"> KLIK SEMUA LAPTOP</font></button></a>
+
       </div>
-    </section>
+
+    </section><!-- /Menu Section -->
+
   </main>
 
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Alamat</h4>
-            <p>Pekajangan Gg 4 Kedungwuni Pekalongan</p>
-            <p>Pekalongan</p>
-          </div>
+  
+<footer id="footer" class="footer dark-background">
+
+  <div class="container">
+    <div class="row gy-3">
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-geo-alt icon"></i>
+        <div class="address">
+          <h4>Alamat</h4>
+          <p>Pekajangan Gg 4 Kedungwuni Pekalongan</p>
+          <p>Pekalongan</p>
+          <p></p>
         </div>
 
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Kontak</h4>
-            <p>
-              <strong>HP:</strong> <span>085117571767</span><br>
-              <strong>Email:</strong> <span>info@bitcomputer.com</span><br>
-            </p>
-          </div>
-        </div>
+      </div>
 
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Buka</h4>
-            <p>
-              <strong>Setiap Hari</strong> <span>09.00 - 21.00</span><br>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
-          <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-telephone icon"></i>
+        <div>
+          <h4>Kontak</h4>
+          <p>
+            <strong>HP:</strong> <span>085117571767</span><br>
+            <strong>Email:</strong> <span>info@example.com</span><br>
+          </p>
         </div>
       </div>
-    </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> 
-        <strong class="px-1 sitename"> 
-          <script type="text/javascript">
-            document.write(new Date().getFullYear());
-          </script>
-        </strong> <span>All Rights Reserved</span>
-      </p>
-      <div class="credits">
-        Bit Computer Pekalongan
+      <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-clock icon"></i>
+        <div>
+          <h4>Buka</h4>
+          <p>
+            <strong>Setiap Hari</strong> <span>09.00  - 21.00</span><br>
+          </p>
+        </div>
       </div>
-    </div>
-  </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      <div class="col-lg-3 col-md-6">
+        <h4>Follow Us</h4>
+        <div class="social-links d-flex">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox">
-    <div class="lightbox-container">
-      <button class="lightbox-close" id="lightboxClose">✕</button>
-      <button class="lightbox-prev" id="lightboxPrev">❮</button>
-      <img id="lightboxImg" class="lightbox-img" src="" alt="">
-      <button class="lightbox-next" id="lightboxNext">❯</button>
-      <div class="lightbox-counter" id="lightboxCounter"></div>
-      <div class="lightbox-thumbnails" id="lightboxThumbnails"></div>
     </div>
   </div>
 
-  <script>
-    // Data Laptop dengan MAKSIMAL 4 GAMBAR per produk
-    const laptops = [
-      { brand: "lenovo", name: "Lenovo Ideapad Slim 1", spec: "Intel N4020, RAM 8GB, SSD 256Gb", oldPrice: "4.500.000", price: "3.199.000", 
-        images: ["img/sekond/lenovo.jpg", "img/sekond/lenovo1.jpg", "img/sekond/lenovo2.jpg", "img/sekond/lenovo3.jpg"] },
-      { brand: "lenovo", name: "Lenovo Ideapad Slim 3i", spec: "Intel i3-1215U, RAM 8GB, SSD 512Gb", oldPrice: "6.800.000", price: "4.999.000", 
-        images: ["https://placehold.co/400x300/34495e/white?text=Front+View", "https://placehold.co/400x300/2c3e50/white?text=Back+View", "https://placehold.co/400x300/34495e/white?text=Keyboard", "https://placehold.co/400x300/2c3e50/white?text=Display"] },
-      { brand: "lenovo", name: "Lenovo Ideapad AMD", spec: "AMD Ryzen 3 7350, RAM 8GB, SSD 512Gb", oldPrice: "6.900.000", price: "4.799.000", 
-        images: ["https://placehold.co/400x300/2c3e50/white?text=Front+View", "https://placehold.co/400x300/34495e/white?text=Back+View", "https://placehold.co/400x300/2c3e50/white?text=Keyboard", "https://placehold.co/400x300/34495e/white?text=Ports"] },
-      { brand: "asus", name: "ASUS Vivobook Go E410KA", spec: "Intel N4500, RAM 8GB, SSD 512Gb", oldPrice: "5.200.000", price: "3.899.000", 
-        images: ["https://placehold.co/400x300/1a5276/white?text=Front+View", "https://placehold.co/400x300/2471a3/white?text=Back+View", "https://placehold.co/400x300/1a5276/white?text=Keyboard", "https://placehold.co/400x300/2471a3/white?text=Side+View"] },
-      { brand: "asus", name: "ASUS Vivobook Go E1404FA", spec: "AMD Ryzen 3 7350, RAM 8GB, SSD 512Gb", oldPrice: "6.500.000", price: "4.699.000", 
-        images: ["https://placehold.co/400x300/2471a3/white?text=Front+View", "https://placehold.co/400x300/1a5276/white?text=Back+View", "https://placehold.co/400x300/2471a3/white?text=Keyboard", "https://placehold.co/400x300/1a5276/white?text=Display"] },
-      { brand: "asus", name: "ASUS Vivobook 14 A1404VA", spec: "Intel i3-1315U, RAM 8GB, SSD 512Gb", oldPrice: "7.500.000", price: "5.599.000", 
-        images: ["https://placehold.co/400x300/2e86c1/white?text=Front+View", "https://placehold.co/400x300/2471a3/white?text=Back+View", "https://placehold.co/400x300/2e86c1/white?text=Keyboard", "https://placehold.co/400x300/2471a3/white?text=Ports"] },
-      { brand: "hp", name: "HP DQ3888TU", spec: "Intel N4500, RAM 4GB, SSD 512Gb", oldPrice: "4.800.000", price: "3.399.000", 
-        images: ["https://placehold.co/400x300/1f618d/white?text=Front+View", "https://placehold.co/400x300/117a65/white?text=Back+View", "https://placehold.co/400x300/1f618d/white?text=Keyboard", "https://placehold.co/400x300/117a65/white?text=Display"] },
-      { brand: "hp", name: "HP 245 G10", spec: "AMD Ryzen 3 7350, RAM 8GB, SSD 512Gb", oldPrice: "5.900.000", price: "4.399.000", 
-        images: ["https://placehold.co/400x300/117a65/white?text=Front+View", "https://placehold.co/400x300/1f618d/white?text=Back+View", "https://placehold.co/400x300/117a65/white?text=Keyboard", "https://placehold.co/400x300/1f618d/white?text=Ports"] },
-      { brand: "hp", name: "HP DQ5115TU", spec: "Intel i3-1315U, RAM 4GB, SSD 512Gb", oldPrice: "6.500.000", price: "4.999.000", 
-        images: ["https://placehold.co/400x300/148f77/white?text=Front+View", "https://placehold.co/400x300/117a65/white?text=Back+View", "https://placehold.co/400x300/148f77/white?text=Keyboard", "https://placehold.co/400x300/117a65/white?text=Display"] },
-      { brand: "acer", name: "Acer Aspire Lite N100", spec: "Intel N100, RAM 8GB, SSD 512Gb", oldPrice: "5.500.000", price: "3.999.000", 
-        images: ["https://placehold.co/400x300/0e6655/white?text=Front+View", "https://placehold.co/400x300/0b5345/white?text=Back+View", "https://placehold.co/400x300/0e6655/white?text=Keyboard", "https://placehold.co/400x300/0b5345/white?text=Ports"] },
-      { brand: "acer", name: "Acer Aspire Lite Ryzen", spec: "AMD Ryzen 3 7350, RAM 8GB, SSD 512Gb", oldPrice: "6.300.000", price: "4.699.000", 
-        images: ["https://placehold.co/400x300/0b5345/white?text=Front+View", "https://placehold.co/400x300/0e6655/white?text=Back+View", "https://placehold.co/400x300/0b5345/white?text=Keyboard", "https://placehold.co/400x300/0e6655/white?text=Display"] },
-      { brand: "acer", name: "Acer Aspire i3", spec: "Intel i3-1315U, RAM 8GB, SSD 512Gb", oldPrice: "7.200.000", price: "5.299.000", 
-        images: ["https://placehold.co/400x300/0a3d32/white?text=Front+View", "https://placehold.co/400x300/0b5345/white?text=Back+View", "https://placehold.co/400x300/0a3d32/white?text=Keyboard", "https://placehold.co/400x300/0b5345/white?text=Ports"] },
-      { brand: "advan", name: "Advan Soulmate", spec: "Intel N4020, RAM 4GB, SSD 128Gb", oldPrice: "2.800.000", price: "1.999.000", 
-        images: ["https://placehold.co/400x300/273746/white?text=Front+View", "https://placehold.co/400x300/212f3d/white?text=Back+View", "https://placehold.co/400x300/273746/white?text=Keyboard", "https://placehold.co/400x300/212f3d/white?text=Ports"] },
-      { brand: "advan", name: "Advan Soulmate Plus", spec: "AMD Ryzen 5 3500, RAM 8GB, SSD 256Gb", oldPrice: "4.500.000", price: "3.299.000", 
-        images: ["https://placehold.co/400x300/2c3e50/white?text=Front+View", "https://placehold.co/400x300/273746/white?text=Back+View", "https://placehold.co/400x300/2c3e50/white?text=Keyboard", "https://placehold.co/400x300/273746/white?text=Display"] },
-      { brand: "advan", name: "Advan Workpro Lite", spec: "Intel i3-1315U, RAM 8GB, SSD 256Gb", oldPrice: "5.200.000", price: "3.899.000", 
-        images: ["https://placehold.co/400x300/212f3d/white?text=Front+View", "https://placehold.co/400x300/273746/white?text=Back+View", "https://placehold.co/400x300/212f3d/white?text=Keyboard", "https://placehold.co/400x300/273746/white?text=Ports"] },
-      { brand: "axioo", name: "Axioo Hype 1", spec: "Intel N4020, RAM 4GB, SSD 128Gb", oldPrice: "2.500.000", price: "1.799.000", 
-        images: ["https://placehold.co/400x300/1b2631/white?text=Front+View", "https://placehold.co/400x300/17202a/white?text=Back+View", "https://placehold.co/400x300/1b2631/white?text=Keyboard", "https://placehold.co/400x300/17202a/white?text=Ports"] },
-      { brand: "axioo", name: "Axioo Hype 10", spec: "Intel N4020, RAM 4GB, SSD 128Gb", oldPrice: "2.600.000", price: "1.849.000", 
-        images: ["https://placehold.co/400x300/17202a/white?text=Front+View", "https://placehold.co/400x300/1b2631/white?text=Back+View", "https://placehold.co/400x300/17202a/white?text=Keyboard", "https://placehold.co/400x300/1b2631/white?text=Display"] },
-      { brand: "axioo", name: "Axioo Hype 5 AMD X3", spec: "AMD Ryzen 5 3500, RAM 8GB, SSD 256Gb", oldPrice: "5.600.000", price: "4.199.000", 
-        images: ["https://placehold.co/400x300/0e1a24/white?text=Front+View", "https://placehold.co/400x300/17202a/white?text=Back+View", "https://placehold.co/400x300/0e1a24/white?text=Keyboard", "https://placehold.co/400x300/17202a/white?text=Ports"] }
-    ];
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> 
+      <strong class="px-1 sitename"> 
+        <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script>
+    </strong> <span>All Rights Reserved</span></p>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you've purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+      Bit Computer Pekalongan
+    </div>
+  </div>
 
-    // Data Spare Part - HANYA 1 GAMBAR per produk
-    const spareparts = [
-      { name: "Charger Asus Original 19V", spec: "Connector 5.5mm", price: "250.000", img: "https://placehold.co/400x300/3498db/white?text=Charger+Asus" },
-      { name: "Charger Lenovo Original 20V", spec: "Slim Tip", price: "275.000", img: "https://placehold.co/400x300/2980b9/white?text=Charger+Lenovo" },
-      { name: "Charger HP Original 19.5V", spec: "Connector 4.5mm", price: "260.000", img: "https://placehold.co/400x300/3498db/white?text=Charger+HP" },
-      { name: "RAM DDR4 8GB PC4-21300", spec: "SODIMM 260 Pin", price: "350.000", img: "https://placehold.co/400x300/2980b9/white?text=RAM+8GB" },
-      { name: "RAM DDR4 16GB PC4-21300", spec: "SODIMM 260 Pin", price: "650.000", img: "https://placehold.co/400x300/3498db/white?text=RAM+16GB" },
-      { name: "SSD 256GB SATA III", spec: "Read 550MB/s", price: "380.000", img: "https://placehold.co/400x300/2980b9/white?text=SSD+256GB" },
-      { name: "SSD 512GB SATA III", spec: "Read 560MB/s", price: "550.000", img: "https://placehold.co/400x300/3498db/white?text=SSD+512GB" },
-      { name: "NVMe SSD 256GB M.2", spec: "PCIe Gen3", price: "420.000", img: "https://placehold.co/400x300/2980b9/white?text=NVMe+256GB" },
-      { name: "Baterai Asus A32-K55", spec: "3800mAh", price: "450.000", img: "https://placehold.co/400x300/3498db/white?text=Baterai+Asus" },
-      { name: "Baterai Lenovo L17C", spec: "3800mAh", price: "430.000", img: "https://placehold.co/400x300/2980b9/white?text=Baterai+Lenovo" },
-      { name: "Keyboard Asus X441", spec: "Fullset + Trackpad", price: "185.000", img: "https://placehold.co/400x300/3498db/white?text=Keyboard+Asus" },
-      { name: "Keyboard Lenovo Ideapad", spec: "Fullset + Trackpad", price: "175.000", img: "https://placehold.co/400x300/2980b9/white?text=Keyboard+Lenovo" },
-      { name: "Kipas Pendingin Asus", spec: "DC 5V 0.5A", price: "95.000", img: "https://placehold.co/400x300/3498db/white?text=Fan+Asus" },
-      { name: "Cooling Pad 12cm", spec: "USB Powered", price: "85.000", img: "https://placehold.co/400x300/2980b9/white?text=Cooling+Pad" },
-      { name: "Mouse Wireless Logitech", spec: "Garansi 3 Bulan", price: "125.000", img: "https://placehold.co/400x300/3498db/white?text=Mouse+Wireless" },
-      { name: "Laptop Lock Security", spec: "Kunci Kombinasi", price: "65.000", img: "https://placehold.co/400x300/2980b9/white?text=Laptop+Lock" }
-    ];
+</footer>
 
-    // Lightbox variables
-    let currentGalleryImages = [];
-    let currentImageIndex = 0;
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    function openLightbox(images, index) {
-      currentGalleryImages = images;
-      currentImageIndex = index;
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<!-- Custom Carousel JS -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.custom-carousel');
+    const slides = document.querySelectorAll('.custom-carousel-slide');
+    const prevBtn = document.getElementById('custom-prevBtn');
+    const nextBtn = document.getElementById('custom-nextBtn');
+    const indicators = document.querySelectorAll('.custom-indicator');
+    
+    let currentIndex = 0;
+    const slideCount = slides.length;
+    let slideInterval;
+    
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
       
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightboxImg');
-      const counter = document.getElementById('lightboxCounter');
-      const thumbContainer = document.getElementById('lightboxThumbnails');
-      
-      lightboxImg.src = images[index];
-      counter.textContent = `${index + 1} / ${images.length}`;
-      
-      // Generate thumbnails horizontal
-      thumbContainer.innerHTML = '';
-      images.forEach((img, idx) => {
-        const thumb = document.createElement('img');
-        thumb.src = img;
-        thumb.className = 'lightbox-thumb';
-        if (idx === index) thumb.classList.add('active-thumb');
-        thumb.onclick = () => {
-          currentImageIndex = idx;
-          lightboxImg.src = images[idx];
-          counter.textContent = `${idx + 1} / ${images.length}`;
-          document.querySelectorAll('.lightbox-thumb').forEach(t => t.classList.remove('active-thumb'));
-          thumb.classList.add('active-thumb');
-          thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        };
-        thumbContainer.appendChild(thumb);
-      });
-      
-      setTimeout(() => {
-        const activeThumb = document.querySelector('.lightbox-thumb.active-thumb');
-        if (activeThumb) {
-          activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      // Update indicators
+      indicators.forEach((indicator, index) => {
+        if (index === currentIndex) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
         }
-      }, 100);
-      
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    function prevLightbox() {
-      if (currentGalleryImages.length === 0) return;
-      currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
-      document.getElementById('lightboxImg').src = currentGalleryImages[currentImageIndex];
-      document.getElementById('lightboxCounter').textContent = `${currentImageIndex + 1} / ${currentGalleryImages.length}`;
-      updateThumbnailActive();
-      const activeThumb = document.querySelector('.lightbox-thumb.active-thumb');
-      if (activeThumb) activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    }
-
-    function nextLightbox() {
-      if (currentGalleryImages.length === 0) return;
-      currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
-      document.getElementById('lightboxImg').src = currentGalleryImages[currentImageIndex];
-      document.getElementById('lightboxCounter').textContent = `${currentImageIndex + 1} / ${currentGalleryImages.length}`;
-      updateThumbnailActive();
-      const activeThumb = document.querySelector('.lightbox-thumb.active-thumb');
-      if (activeThumb) activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    }
-
-    function updateThumbnailActive() {
-      const thumbs = document.querySelectorAll('.lightbox-thumb');
-      thumbs.forEach((thumb, idx) => {
-        if (idx === currentImageIndex) thumb.classList.add('active-thumb');
-        else thumb.classList.remove('active-thumb');
       });
     }
-
-    // Render Laptop
-    function renderLaptops(filter = "all") {
-      const container = document.getElementById("productList");
-      container.innerHTML = "";
-      const filtered = filter === "all" ? laptops : laptops.filter(l => l.brand === filter);
-      
-      filtered.forEach((item, idx) => {
-        const col = document.createElement("div");
-        col.className = "col-product";
-        col.setAttribute("data-brand", item.brand);
-        
-        let thumbnailsHtml = '<div class="gallery-thumbnails">';
-        item.images.forEach((img, i) => {
-          thumbnailsHtml += `<img src="${img}" class="gallery-thumb" data-product-index="${idx}" data-img-index="${i}" alt="Thumb ${i+1}">`;
-        });
-        thumbnailsHtml += '</div>';
-        
-        col.innerHTML = `
-          <div class="menu-item">
-            <div class="badge-second">Second</div>
-            <img src="${item.images[0]}" class="product-img" data-product-index="${idx}" data-img-index="0" alt="${item.name}">
-            ${thumbnailsHtml}
-            <h4 class="mt-3">${item.name}</h4>
-            <p class="text-muted small ingredients">${item.spec}</p>
-            <p><span class="old-price">Rp ${item.oldPrice}</span> <span class="price-second">Rp ${item.price}</span></p>
-            <a href="https://wa.me/6285117571767?text=Halo%20Bit%20Computer,%20saya%20tertarik%20dengan%20${encodeURIComponent(item.name)}%20harga%20Rp%20${item.price}" class="btn-detail" target="_blank">Beli via WA</a>
-          </div>
-        `;
-        container.appendChild(col);
-      });
-      
-      attachGalleryEvents();
+    
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateCarousel();
     }
-
-    // Render Spare Part
-    function renderSpareparts() {
-      const container = document.getElementById("sparepartList");
-      container.innerHTML = "";
-      
-      spareparts.forEach((item, idx) => {
-        const col = document.createElement("div");
-        col.className = "col-product";
-        
-        col.innerHTML = `
-          <div class="menu-item">
-            <div class="badge-part">Ready</div>
-            <img src="${item.img}" class="product-img" data-part-index="${idx}" alt="${item.name}">
-            <h4 class="mt-3">${item.name}</h4>
-            <p class="text-muted small ingredients">${item.spec}</p>
-            <p><span class="price-part">Rp ${item.price}</span></p>
-            <a href="https://wa.me/6285117571767?text=Halo%20Bit%20Computer,%20saya%20tertarik%20dengan%20${encodeURIComponent(item.name)}%20harga%20Rp%20${item.price}" class="btn-detail" target="_blank">Tanya Stok</a>
-          </div>
-        `;
-        container.appendChild(col);
-      });
-      
-      attachSparepartGalleryEvents();
+    
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+      updateCarousel();
     }
-
-    function attachGalleryEvents() {
-      document.querySelectorAll('#productList .product-img').forEach(img => {
-        img.removeEventListener('click', productImgClick);
-        img.addEventListener('click', productImgClick);
-      });
-      document.querySelectorAll('#productList .gallery-thumb').forEach(thumb => {
-        thumb.removeEventListener('click', thumbClick);
-        thumb.addEventListener('click', thumbClick);
-      });
+    
+    function startAutoSlide() {
+      slideInterval = setInterval(nextSlide, 2000); // Auto slide setiap 2 detik
     }
-
-    function productImgClick(e) {
-      const productIdx = parseInt(this.getAttribute('data-product-index'));
-      const imgIdx = parseInt(this.getAttribute('data-img-index'));
-      if (laptops[productIdx]) {
-        openLightbox(laptops[productIdx].images, imgIdx);
+    
+    // Initialize carousel
+    updateCarousel();
+    startAutoSlide();
+    
+    // Button click events
+    nextBtn.addEventListener('click', () => {
+      clearInterval(slideInterval);
+      nextSlide();
+      startAutoSlide();
+    });
+    
+    prevBtn.addEventListener('click', () => {
+      clearInterval(slideInterval);
+      prevSlide();
+      startAutoSlide();
+    });
+    
+    // Indicator click events
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        clearInterval(slideInterval);
+        currentIndex = index;
+        updateCarousel();
+        startAutoSlide();
+      });
+    });
+    
+    // Pause on hover
+    const carouselContainer = document.querySelector('.custom-carousel-container');
+    carouselContainer.addEventListener('mouseenter', () => {
+      clearInterval(slideInterval);
+    });
+    
+    carouselContainer.addEventListener('mouseleave', startAutoSlide);
+    
+    // Touch support for mobile devices
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carouselContainer.addEventListener('touchstart', (e) => {
+      clearInterval(slideInterval);
+      touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    carouselContainer.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+      startAutoSlide();
+    }, {passive: true});
+    
+    function handleSwipe() {
+      if (touchEndX < touchStartX - 50) {
+        nextSlide(); // Swipe left
+      }
+      if (touchEndX > touchStartX + 50) {
+        prevSlide(); // Swipe right
       }
     }
+  });
+</script>
 
-    function thumbClick(e) {
-      e.stopPropagation();
-      const productIdx = parseInt(this.getAttribute('data-product-index'));
-      const imgIdx = parseInt(this.getAttribute('data-img-index'));
-      const parentItem = this.closest('.menu-item');
-      const mainImg = parentItem.querySelector('.product-img');
-      if (mainImg && laptops[productIdx] && laptops[productIdx].images[imgIdx]) {
-        mainImg.src = laptops[productIdx].images[imgIdx];
-        mainImg.setAttribute('data-img-index', imgIdx);
-      }
-      openLightbox(laptops[productIdx].images, imgIdx);
-    }
-
-    function attachSparepartGalleryEvents() {
-      document.querySelectorAll('#sparepartList .product-img').forEach(img => {
-        img.removeEventListener('click', sparepartImgClick);
-        img.addEventListener('click', sparepartImgClick);
-      });
-    }
-
-    function sparepartImgClick(e) {
-      const partIdx = parseInt(this.getAttribute('data-part-index'));
-      if (spareparts[partIdx]) {
-        openLightbox([spareparts[partIdx].img], 0);
-      }
-    }
-
-    // Hero Carousel
-    let slideIndex = 0;
-    const slides = document.querySelectorAll("#heroCarousel img");
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-      if (index >= totalSlides) slideIndex = 0;
-      if (index < 0) slideIndex = totalSlides - 1;
-      const carousel = document.getElementById("heroCarousel");
-      if (carousel) carousel.style.transform = `translateX(-${slideIndex * 100}%)`;
-    }
-
-    function nextSlide() { slideIndex++; showSlide(slideIndex); }
-    function prevSlide() { slideIndex--; showSlide(slideIndex); }
-
-    if (totalSlides > 0) {
-      showSlide(0);
-      setInterval(() => { slideIndex++; showSlide(slideIndex); }, 4000);
-    }
-
-    // Filter
-    document.querySelectorAll(".filter-btn").forEach(btn => {
-      btn.addEventListener("click", function() {
-        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active-filter"));
-        this.classList.add("active-filter");
-        renderLaptops(this.getAttribute("data-filter"));
-      });
-    });
-
-    // Scroll Top
-    const scrollTop = document.getElementById("scroll-top");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) scrollTop.classList.add("show");
-      else scrollTop.classList.remove("show");
-    });
-    scrollTop.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    // Lightbox event listeners
-    document.getElementById('lightboxClose').onclick = closeLightbox;
-    document.getElementById('lightboxPrev').onclick = prevLightbox;
-    document.getElementById('lightboxNext').onclick = nextLightbox;
-    document.getElementById('lightbox').onclick = (e) => {
-      if (e.target === document.getElementById('lightbox')) closeLightbox();
-    };
-    document.addEventListener('keydown', (e) => {
-      if (!document.getElementById('lightbox').classList.contains('active')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') prevLightbox();
-      if (e.key === 'ArrowRight') nextLightbox();
-    });
-
-    // Initial render
-    renderLaptops("all");
-    renderSpareparts();
-
-    // Expose functions
-    window.prevSlide = prevSlide;
-    window.nextSlide = nextSlide;
-  </script>
 </body>
-
 </html>
