@@ -53,7 +53,16 @@
       line-height: 1.4;
     }
 
-    /* Harga */
+    /* Harga - dibuat flex row bersampingan */
+    .price-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+    }
+
     .price-second, .price-part {
       font-family: 'Poppins', 'Inter', sans-serif;
       font-weight: 700;
@@ -254,23 +263,25 @@
       z-index: 5;
     }
 
-    /* Gallery Thumbnails - Hanya untuk Laptop */
+    /* Gallery Thumbnails - LEBIH KECIL AGAR 1 BARIS (4 gambar) */
     .gallery-thumbnails {
       display: flex;
-      gap: 8px;
-      margin-top: 12px;
+      gap: 5px;
+      margin-top: 10px;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      overflow-x: auto;
     }
 
     .gallery-thumb {
-      width: 60px;
-      height: 60px;
+      width: 45px;
+      height: 45px;
       object-fit: cover;
       border-radius: 8px;
       cursor: pointer;
       border: 2px solid transparent;
       transition: all 0.2s;
+      flex-shrink: 0;
     }
 
     .gallery-thumb:hover {
@@ -294,7 +305,6 @@
       text-decoration: line-through;
       color: #adb5bd;
       font-size: 13px;
-      margin-right: 8px;
     }
 
     .price-second {
@@ -584,7 +594,7 @@
       .old-price { font-size: 10px; }
       .btn-detail { padding: 6px 12px; font-size: 10px; margin-top: 4px; }
       .badge-second, .badge-part { font-size: 8px; padding: 3px 6px; }
-      .gallery-thumb { width: 45px; height: 45px; }
+      .gallery-thumb { width: 38px; height: 38px; }
       .section-title { margin-bottom: 35px; }
       .section-title h3 { font-size: 22px; }
       .section-title h5 { font-size: 11px; }
@@ -597,10 +607,12 @@
     }
     @media (max-width: 480px) {
       .col-product { width: 50%; padding: 0 8px; margin-bottom: 15px; }
-      .gallery-thumb { width: 38px; height: 38px; }
+      .gallery-thumb { width: 32px; height: 32px; }
       .menu-item { padding: 10px; margin-bottom: 20px; }
       .lightbox-thumb { width: 30px; height: 30px; }
       .menu-item h4 { font-size: 11px; }
+      .price-second, .price-part { font-size: 11px; }
+      .old-price { font-size: 9px; }
     }
   </style>
 
@@ -636,7 +648,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="https://wa.me/6285117571767" target="_blank">Hubungi Kami</a>
+      <a class="btn-getstarted" href="https://wa.me/6285117571767" target="_blank">Whatsapp</a>
 
     </div>
   </header>
@@ -689,7 +701,7 @@
       <div class="container">
         <div class="section-title">
           <h3>Aksesoris & <span class="blue-text">Spare Part</span></h3>
-          <p style="font-family: 'Inter', sans-serif; font-weight: 500; color: #5a6e7c;">Charger | RAM | SSD | Baterai | Keyboard | Fan | Dan Lain-lain</p>
+          
         </div>
         <div class="row-products" id="sparepartList"></div>
         <div class="text-center mt-5">
@@ -950,7 +962,10 @@
             ${thumbnailsHtml}
             <h4 class="mt-3">${item.name}</h4>
             <p class="text-muted small ingredients">${item.spec}</p>
-            <p><span class="old-price">Rp ${item.oldPrice}</span> <span class="price-second">Rp ${item.price}</span></p>
+            <div class="price-wrapper">
+              <span class="old-price">Rp ${item.oldPrice}</span>
+              <span class="price-second">Rp ${item.price}</span>
+            </div>
             <a href="https://wa.me/6285117571767?text=Halo%20Bit%20Computer,%20saya%20tertarik%20dengan%20${encodeURIComponent(item.name)}%20harga%20Rp%20${item.price}" class="btn-detail" target="_blank">Beli via WA</a>
           </div>
         `;
@@ -975,7 +990,9 @@
             <img src="${item.img}" class="product-img" data-part-index="${idx}" alt="${item.name}">
             <h4 class="mt-3">${item.name}</h4>
             <p class="text-muted small ingredients">${item.spec}</p>
-            <p><span class="price-part">Rp ${item.price}</span></p>
+            <div class="price-wrapper">
+              <span class="price-part">Rp ${item.price}</span>
+            </div>
             <a href="https://wa.me/6285117571767?text=Halo%20Bit%20Computer,%20saya%20tertarik%20dengan%20${encodeURIComponent(item.name)}%20harga%20Rp%20${item.price}" class="btn-detail" target="_blank">Tanya Stok</a>
           </div>
         `;
