@@ -11,10 +11,10 @@
   <link href="assets/img/bitlogo.png" rel="icon">
   <link href="assets/img/bitlogo.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
+  <!-- Fonts Google - Menambahkan Poppins dan Inter -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +30,100 @@
     /* ========================================
        STYLE KHUSUS LAPTOP SECOND (selain header)
        ======================================== */
+
+    /* Font styling untuk teks yang lebih bagus */
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+    }
+
+    /* Judul produk */
+    .menu-item h4 {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: -0.2px;
+    }
+
+    /* Spesifikasi produk (kondisi, spek) */
+    .ingredients {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: #5a6e7c;
+      line-height: 1.4;
+    }
+
+    /* Harga */
+    .price-second, .price-part {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .old-price {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+    }
+
+    /* Section title deskripsi */
+    .section-title p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #6c757d;
+    }
+
+    .section-title p span {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Subtitle (Kondisi 90% - 95% | Free Antar Pekalongan) */
+    .section-title h5 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #6c757d;
+      letter-spacing: -0.2px;
+    }
+
+    /* Spare part kategori text (Charger | RAM | SSD | ...) */
+    .spare-section .section-title p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      color: #5a6e7c;
+    }
+
+    /* Badge styling */
+    .badge-second, .badge-part {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    /* Tombol */
+    .btn-detail, .btn-second, .btn-part {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .filter-btn {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    /* Hero Section */
+    .hero-second h2 {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-second .lead {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+    }
 
     /* Hero Section */
     .hero-second {
@@ -87,7 +181,6 @@
       border-radius: 40px;
       padding: 8px 22px;
       font-size: 14px;
-      font-weight: 500;
       border: 2px solid #e9ecef;
       background: white;
       color: #495057;
@@ -241,6 +334,7 @@
     }
 
     .section-title h3 {
+      font-family: 'Poppins', 'Inter', sans-serif;
       font-size: 28px;
       font-weight: 700;
     }
@@ -397,6 +491,7 @@
       border-radius: 20px;
       font-size: 14px;
       z-index: 10;
+      font-family: 'Inter', sans-serif;
     }
 
     /* THUMBNAIL HORIZONTAL - MEMANJANG DARI KIRI KE KANAN, UKURAN LEBIH KECIL */
@@ -492,6 +587,7 @@
       .gallery-thumb { width: 45px; height: 45px; }
       .section-title { margin-bottom: 35px; }
       .section-title h3 { font-size: 22px; }
+      .section-title h5 { font-size: 11px; }
       .filter-btn { padding: 5px 12px; font-size: 11px; margin: 3px; }
       
       .lightbox-prev, .lightbox-next { width: 40px; height: 40px; font-size: 20px; }
@@ -504,6 +600,7 @@
       .gallery-thumb { width: 38px; height: 38px; }
       .menu-item { padding: 10px; margin-bottom: 20px; }
       .lightbox-thumb { width: 30px; height: 30px; }
+      .menu-item h4 { font-size: 11px; }
     }
   </style>
 
@@ -534,7 +631,7 @@
           <li><a href="#laptop">Laptop Second</a></li>
           <li><a href="#sparepart">Spare Part</a></li>
           <li><a href="#footer">Kontak</a></li>
-          <li><a href="index.html">Kembali ke Beranda</a></li>
+          <li><a href="https://pcpkl.github.io/index.html">Tanya Laptop Baru</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -571,7 +668,7 @@
     <section id="laptop" class="container" style="padding: 60px 15px;">
       <div class="section-title">
         <h3>Pilihan <span class="red-text">Laptop Second</span></h3>
-        <p>Kondisi 90% - 95% | Free Antar Pekalongan</p>
+        <h5 style="font-family: 'Inter', sans-serif; font-weight: 500; color: #6c757d; margin-top: 8px;">Kondisi 90% - 95% | Free Antar Pekalongan</h5>
       </div>
       <div class="text-center mb-5">
         <button class="filter-btn active-filter" data-filter="all">Semua Brand</button>
@@ -592,7 +689,7 @@
       <div class="container">
         <div class="section-title">
           <h3>Aksesoris & <span class="blue-text">Spare Part</span></h3>
-          <p>Charger | RAM | SSD | Baterai | Keyboard | Fan | Dan Lain-lain</p>
+          <p style="font-family: 'Inter', sans-serif; font-weight: 500; color: #5a6e7c;">Charger | RAM | SSD | Baterai | Keyboard | Fan | Dan Lain-lain</p>
         </div>
         <div class="row-products" id="sparepartList"></div>
         <div class="text-center mt-5">
