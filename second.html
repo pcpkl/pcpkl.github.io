@@ -4,15 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Bit Computer Pekalongan - Laptop Second & Servis</title>
-  <meta name="description" content="Laptop Second Berkualitas, Spare Part, dan Servis Laptop di Pekalongan. Gratis antar dan jemput servis!">
-  <meta name="keywords" content="laptop second, servis laptop, spare part laptop, pekalongan, bit computer">
+  <title>Bit Computer Pekalongan - Laptop Second & Spare Part</title>
+  <meta name="description" content="Daftar Laptop Second dan Spare Part Aksesoris Berkualitas dari Bit Computer Pekalongan">
 
   <!-- Favicons -->
   <link href="assets/img/bitlogo.png" rel="icon">
   <link href="assets/img/bitlogo.png" rel="apple-touch-icon">
 
-  <!-- Fonts Google -->
+  <!-- Fonts Google - Menambahkan Poppins dan Inter -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,81 +28,110 @@
 
   <style>
     /* ========================================
-       STYLE KHUSUS LAPTOP SECOND & SERVIS
+       STYLE KHUSUS LAPTOP SECOND (selain header)
        ======================================== */
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Font styling untuk teks yang lebih bagus */
     body {
       font-family: 'Inter', 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
     }
 
-    /* Header */
-    .header {
-      background: white;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-      padding: 12px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    /* Judul produk */
+    .menu-item h4 {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: -0.2px;
     }
 
-    .logo {
-      text-decoration: none;
-      font-size: 28px;
-      font-weight: 700;
+    /* Spesifikasi produk (kondisi, spek) */
+    .ingredients {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: #5a6e7c;
+      line-height: 1.4;
     }
 
-    .logo h1 {
-      font-size: 28px;
-      margin: 0;
-      color: #2c3e50;
-      display: inline-block;
-    }
-
-    .logo .bit-red {
-      color: #ff6b6b;
-    }
-
-    .btn-getstarted {
-      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-      color: white;
-      padding: 8px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s;
-    }
-
-    .btn-getstarted:hover {
-      background: linear-gradient(135deg, #ee5a24 0%, #ff4757 100%);
-      transform: translateY(-2px);
-      color: white;
-    }
-
-    /* Navbar */
-    .navmenu ul {
+    /* Harga - dibuat flex row bersampingan */
+    .price-wrapper {
       display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
     }
 
-    .navmenu ul li a {
-      padding: 10px 15px;
-      text-decoration: none;
-      color: #2c3e50;
+    .price-second, .price-part {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .old-price {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+    }
+
+    /* Section title deskripsi */
+    .section-title p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #6c757d;
+    }
+
+    .section-title p span {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Subtitle (Kondisi 90% - 95% | Free Antar Pekalongan) */
+    .section-title h5 {
+      font-family: 'Inter', sans-serif;
       font-weight: 500;
-      transition: 0.3s;
+      font-size: 0.95rem;
+      color: #6c757d;
+      letter-spacing: -0.2px;
     }
 
-    .navmenu ul li a:hover {
-      color: #ff6b6b;
+    /* Spare part kategori text (Charger | RAM | SSD | ...) */
+    .spare-section .section-title p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      color: #5a6e7c;
+    }
+
+    /* Badge styling */
+    .badge-second, .badge-part {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    /* Tombol */
+    .btn-detail, .btn-second, .btn-part {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .filter-btn {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    /* Hero Section */
+    .hero-second h2 {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-second .lead {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
     }
 
     /* Hero Section */
@@ -115,13 +143,10 @@
     .hero-second h2 {
       color: #ff6b6b;
       font-size: 2.5rem;
-      font-family: 'Poppins', 'Inter', sans-serif;
-      font-weight: 700;
     }
 
     .hero-second .lead {
       color: rgba(255, 255, 255, 0.85);
-      font-family: 'Inter', sans-serif;
     }
 
     /* Button Styles */
@@ -151,7 +176,6 @@
       font-weight: 500;
       text-decoration: none;
       display: inline-block;
-      transition: all 0.3s;
     }
 
     .btn-part:hover {
@@ -171,8 +195,6 @@
       color: #495057;
       cursor: pointer;
       transition: all 0.3s;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
     }
 
     .filter-btn:hover {
@@ -241,7 +263,7 @@
       z-index: 5;
     }
 
-    /* Gallery Thumbnails */
+    /* Gallery Thumbnails - LEBIH KECIL AGAR 1 BARIS (4 gambar) */
     .gallery-thumbnails {
       display: flex;
       gap: 5px;
@@ -283,30 +305,18 @@
       text-decoration: line-through;
       color: #adb5bd;
       font-size: 13px;
-      font-family: 'Inter', sans-serif;
     }
 
     .price-second {
       color: #e83e3e;
       font-weight: bold;
       font-size: 18px;
-      font-family: 'Poppins', 'Inter', sans-serif;
     }
 
     .price-part {
       color: #2980b9;
       font-weight: bold;
       font-size: 18px;
-      font-family: 'Poppins', 'Inter', sans-serif;
-    }
-
-    .price-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 5px;
     }
 
     .btn-detail {
@@ -320,8 +330,6 @@
       margin-top: 5px;
       width: 100%;
       text-align: center;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
     }
 
     .btn-detail:hover {
@@ -349,62 +357,11 @@
       color: #3498db;
     }
 
-    .section-title p {
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      color: #6c757d;
-    }
-
     /* Spare Part Section */
     .spare-section {
       background: #f0f4f8;
       padding: 60px 0;
       margin-top: 40px;
-    }
-
-    /* Service Section */
-    .service-section {
-      background: #ffffff;
-      padding: 60px 0;
-    }
-
-    .service-card {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      border-radius: 24px;
-      padding: 35px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    }
-
-    .service-icon i {
-      font-size: 48px;
-      color: #ff6b6b;
-    }
-
-    /* Review Section */
-    .reviews-section {
-      background: #f8f9fa;
-      padding: 60px 0;
-    }
-
-    .review-card {
-      background: white;
-      border-radius: 20px;
-      padding: 20px;
-      height: 100%;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s;
-    }
-
-    .review-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .review-text {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      color: #495057;
-      font-style: italic;
     }
 
     /* Carousel */
@@ -430,7 +387,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255,255,255,0.8);
       border: none;
       padding: 10px 15px;
       border-radius: 50%;
@@ -438,15 +395,10 @@
       font-size: 18px;
     }
 
-    .carousel-prev {
-      left: 15px;
-    }
+    .carousel-prev { left: 15px; }
+    .carousel-next { right: 15px; }
 
-    .carousel-next {
-      right: 15px;
-    }
-
-    /* Lightbox */
+    /* Lightbox Gallery - UKURAN MAKSIMAL & THUMBNAIL HORIZONTAL */
     .lightbox {
       display: none;
       position: fixed;
@@ -454,7 +406,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.95);
+      background: rgba(0,0,0,0.95);
       z-index: 2000;
       justify-content: center;
       align-items: center;
@@ -484,13 +436,14 @@
       height: auto;
       object-fit: contain;
       border-radius: 8px;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.5);
     }
 
     .lightbox-close {
       position: absolute;
       top: 20px;
       right: 30px;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255,255,255,0.2);
       color: white;
       width: 45px;
       height: 45px;
@@ -500,6 +453,7 @@
       justify-content: center;
       font-size: 28px;
       cursor: pointer;
+      transition: all 0.3s;
       border: none;
       z-index: 10;
     }
@@ -509,12 +463,11 @@
       transform: rotate(90deg);
     }
 
-    .lightbox-prev,
-    .lightbox-next {
+    .lightbox-prev, .lightbox-next {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255,255,255,0.2);
       color: white;
       width: 50px;
       height: 50px;
@@ -524,23 +477,18 @@
       justify-content: center;
       font-size: 28px;
       cursor: pointer;
+      transition: all 0.3s;
       border: none;
       z-index: 10;
     }
 
-    .lightbox-prev:hover,
-    .lightbox-next:hover {
+    .lightbox-prev:hover, .lightbox-next:hover {
       background: #ff6b6b;
       transform: translateY(-50%) scale(1.1);
     }
 
-    .lightbox-prev {
-      left: 20px;
-    }
-
-    .lightbox-next {
-      right: 20px;
-    }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
 
     .lightbox-counter {
       position: absolute;
@@ -548,7 +496,7 @@
       left: 50%;
       transform: translateX(-50%);
       color: white;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0,0,0,0.6);
       padding: 5px 15px;
       border-radius: 20px;
       font-size: 14px;
@@ -556,6 +504,7 @@
       font-family: 'Inter', sans-serif;
     }
 
+    /* THUMBNAIL HORIZONTAL - MEMANJANG DARI KIRI KE KANAN, UKURAN LEBIH KECIL */
     .lightbox-thumbnails {
       position: fixed;
       bottom: 15px;
@@ -563,7 +512,7 @@
       transform: translateX(-50%);
       display: flex;
       gap: 8px;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0,0,0,0.6);
       padding: 10px 15px;
       border-radius: 50px;
       overflow-x: auto;
@@ -572,6 +521,7 @@
       white-space: nowrap;
       z-index: 10;
       scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
     }
 
     .lightbox-thumbnails::-webkit-scrollbar {
@@ -579,7 +529,7 @@
     }
 
     .lightbox-thumbnails::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255,255,255,0.2);
       border-radius: 10px;
     }
 
@@ -599,41 +549,9 @@
       flex-shrink: 0;
     }
 
-    .lightbox-thumb:hover,
-    .lightbox-thumb.active-thumb {
+    .lightbox-thumb:hover, .lightbox-thumb.active-thumb {
       border-color: #ff6b6b;
       transform: scale(1.05);
-    }
-
-    /* Footer */
-    .footer {
-      background: #1a1a2e;
-      color: white;
-      padding: 40px 0 20px;
-      margin-top: 0;
-    }
-
-    .footer .icon {
-      font-size: 24px;
-      color: #ff6b6b;
-      margin-right: 15px;
-    }
-
-    .footer .social-links a {
-      background: rgba(255, 255, 255, 0.1);
-      width: 36px;
-      height: 36px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      margin-right: 10px;
-      color: white;
-      text-decoration: none;
-    }
-
-    .footer .social-links a:hover {
-      background: #ff6b6b;
     }
 
     .scroll-top {
@@ -660,112 +578,62 @@
       visibility: visible;
     }
 
-    /* Responsive */
+    /* Responsive Grid */
     @media (min-width: 992px) {
-      .col-product {
-        width: 25%;
-        padding: 0 12px;
-        margin-bottom: 30px;
-      }
+      .col-product { width: 25%; padding: 0 12px; margin-bottom: 30px; }
     }
-
     @media (min-width: 768px) and (max-width: 991px) {
-      .col-product {
-        width: 33.333%;
-        padding: 0 12px;
-        margin-bottom: 30px;
-      }
+      .col-product { width: 33.333%; padding: 0 12px; margin-bottom: 30px; }
     }
-
     @media (max-width: 767px) {
-      .col-product {
-        width: 50%;
-        padding: 0 10px;
-        margin-bottom: 20px;
-      }
-
-      .menu-item {
-        padding: 12px;
-        margin-bottom: 25px;
-      }
-
-      .menu-item h4 {
-        font-size: 13px;
-      }
-
-      .ingredients {
-        font-size: 10px;
-      }
-
-      .price-second,
-      .price-part {
-        font-size: 13px;
-      }
-
-      .old-price {
-        font-size: 10px;
-      }
-
-      .btn-detail {
-        padding: 6px 12px;
-        font-size: 10px;
-      }
-
-      .gallery-thumb {
-        width: 38px;
-        height: 38px;
-      }
-
-      .section-title h3 {
-        font-size: 22px;
-      }
-
-      .filter-btn {
-        padding: 5px 12px;
-        font-size: 11px;
-        margin: 3px;
-      }
-
-      .lightbox-prev,
-      .lightbox-next {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-      }
-
-      .lightbox-thumb {
-        width: 35px;
-        height: 35px;
-      }
+      .col-product { width: 50%; padding: 0 10px; margin-bottom: 20px; }
+      .menu-item { padding: 12px; margin-bottom: 25px; }
+      .menu-item h4 { font-size: 13px; }
+      .ingredients { font-size: 10px; }
+      .price-second, .price-part { font-size: 13px; }
+      .old-price { font-size: 10px; }
+      .btn-detail { padding: 6px 12px; font-size: 10px; margin-top: 4px; }
+      .badge-second, .badge-part { font-size: 8px; padding: 3px 6px; }
+      .gallery-thumb { width: 38px; height: 38px; }
+      .section-title { margin-bottom: 35px; }
+      .section-title h3 { font-size: 22px; }
+      .section-title h5 { font-size: 11px; }
+      .filter-btn { padding: 5px 12px; font-size: 11px; margin: 3px; }
+      
+      .lightbox-prev, .lightbox-next { width: 40px; height: 40px; font-size: 20px; }
+      .lightbox-close { top: 10px; right: 15px; width: 40px; height: 40px; font-size: 24px; }
+      .lightbox-thumb { width: 35px; height: 35px; }
+      .lightbox-counter { bottom: 65px; font-size: 12px; }
     }
-
     @media (max-width: 480px) {
-      .col-product {
-        width: 50%;
-        padding: 0 8px;
-      }
-
-      .gallery-thumb {
-        width: 32px;
-        height: 32px;
-      }
-
-      .menu-item h4 {
-        font-size: 11px;
-      }
+      .col-product { width: 50%; padding: 0 8px; margin-bottom: 15px; }
+      .gallery-thumb { width: 32px; height: 32px; }
+      .menu-item { padding: 10px; margin-bottom: 20px; }
+      .lightbox-thumb { width: 30px; height: 30px; }
+      .menu-item h4 { font-size: 11px; }
+      .price-second, .price-part { font-size: 11px; }
+      .old-price { font-size: 9px; }
     }
   </style>
+
+  <!-- =======================================================
+  * Template Name: Yummy
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body class="index-page">
 
-  <!-- HEADER -->
+  <!-- HEADER MENGIKUTI INDEX.HTML -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="https://pcpkl.github.io/second.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <h1 class="sitename">Bit</h1>
-        <span class="bit-red">Com</span>
+        <span>Com</span>
         <span style="background: #ff6b6b; padding: 2px 8px; border-radius: 20px; font-size: 12px; margin-left: 8px; color: white;">Second</span>
       </a>
 
@@ -774,9 +642,8 @@
           <li><a href="#home" class="active">Beranda</a></li>
           <li><a href="#laptop">Laptop Second</a></li>
           <li><a href="#sparepart">Spare Part</a></li>
-          <li><a href="#service">Servis</a></li>
-          <li><a href="#reviews">Ulasan</a></li>
           <li><a href="#footer">Kontak</a></li>
+            <!-- <li><a href="https://pcpkl.github.io/index.html">Tanya Laptop Baru</a></li> -->
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -787,7 +654,6 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section id="home" class="hero-second">
       <div class="container">
         <div class="row align-items-center">
@@ -811,7 +677,6 @@
       </div>
     </section>
 
-    <!-- Laptop Second Section -->
     <section id="laptop" class="container" style="padding: 60px 15px;">
       <div class="section-title">
         <h3>Pilihan <span class="red-text">Laptop Second</span></h3>
@@ -825,7 +690,7 @@
         <button class="filter-btn" data-filter="acer">Acer</button>
         <button class="filter-btn" data-filter="advan">Advan</button>
         <button class="filter-btn" data-filter="axioo">Axioo</button>
-        <button class="filter-btn" data-filter="dell">Dell</button>
+		<button class="filter-btn" data-filter="dell">Dell</button>
       </div>
       <div class="row-products" id="productList"></div>
       <div class="text-center mt-5">
@@ -833,12 +698,11 @@
       </div>
     </section>
 
-    <!-- Spare Part Section -->
     <section id="sparepart" class="spare-section">
       <div class="container">
         <div class="section-title">
           <h3>Aksesoris & <span class="blue-text">Spare Part</span></h3>
-          <p style="font-family: 'Inter', sans-serif; font-weight: 500; color: #5a6e7c;">Charger Original | RAM | SSD | Dan Lain-lain</p>
+          
         </div>
         <div class="row-products" id="sparepartList"></div>
         <div class="text-center mt-5">
@@ -847,8 +711,9 @@
       </div>
     </section>
 
-    <!-- Service Section - Layanan Servis -->
-    <section id="service" class="service-section">
+
+    <!-- ==================== SECTION LAYANAN SERVIS ==================== -->
+    <section id="service" class="service-section" style="padding: 60px 0; background: #fff;">
       <div class="container">
         <div class="section-title">
           <h3>Layanan <span class="red-text">Servis & Perbaikan</span></h3>
@@ -857,9 +722,9 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <div class="service-card">
+            <div class="service-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 24px; padding: 35px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
               <div class="service-icon mb-4">
-                <i class="bi bi-tools"></i>
+                <i class="bi bi-tools" style="font-size: 48px; color: #ff6b6b;"></i>
               </div>
               <h4 style="font-family: 'Poppins', sans-serif; font-weight: 600; margin-bottom: 15px;">Servis Laptop & Komputer</h4>
               <p style="font-family: 'Inter', sans-serif; color: #6c757d; margin-bottom: 20px; font-size: 1rem;">
@@ -887,8 +752,8 @@
       </div>
     </section>
 
-    <!-- Reviews Section - Ulasan Google Maps -->
-    <section id="reviews" class="reviews-section">
+    <!-- ==================== SECTION ULASAN GOOGLE MAPS ==================== -->
+    <section id="reviews" class="reviews-section" style="padding: 60px 0; background: #f8f9fa;">
       <div class="container">
         <div class="section-title">
           <h3>Apa Kata <span class="red-text">Pelanggan Kami?</span></h3>
@@ -897,7 +762,7 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-10">
-            <!-- Google Maps Embed -->
+            <!-- Google Maps Embedded Widget -->
             <div class="google-maps-card" style="border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px;">
               <iframe 
                 src="https://maps.google.com/maps?q=Bit%20Computer%20Pekalongan&z=15&output=embed" 
@@ -909,11 +774,11 @@
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             </div>
-
-            <!-- Review Cards -->
+            
+            <!-- Review Cards (Diringkas dari Google Maps) -->
             <div class="row g-4">
               <div class="col-md-4">
-                <div class="review-card">
+                <div class="review-card" style="background: white; border-radius: 20px; padding: 20px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                   <div class="d-flex align-items-center gap-2 mb-3">
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
@@ -921,7 +786,7 @@
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
                   </div>
-                  <p class="review-text">"Servisnya cepat dan rapi. Laptop saya yang mati total bisa hidup lagi. Terima kasih Bit Computer!"</p>
+                  <p class="review-text" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #495057; font-style: italic;">"Servisnya cepat dan rapi. Laptop saya yang mati total bisa hidup lagi. Terima kasih Bit Computer!"</p>
                   <div class="d-flex align-items-center gap-2 mt-3">
                     <i class="bi bi-person-circle" style="font-size: 32px; color: #6c757d;"></i>
                     <div>
@@ -932,7 +797,7 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="review-card">
+                <div class="review-card" style="background: white; border-radius: 20px; padding: 20px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                   <div class="d-flex align-items-center gap-2 mb-3">
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
@@ -940,7 +805,7 @@
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
                   </div>
-                  <p class="review-text">"Beli laptop second di sini, kondisi mulus seperti baru. Harga bersaing dan pelayanannya ramah. Recomended!"</p>
+                  <p class="review-text" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #495057; font-style: italic;">"Beli laptop second di sini, kondisi mulus seperti baru. Harga bersaing dan pelayanannya ramah. Recomended!"</p>
                   <div class="d-flex align-items-center gap-2 mt-3">
                     <i class="bi bi-person-circle" style="font-size: 32px; color: #6c757d;"></i>
                     <div>
@@ -951,7 +816,7 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="review-card">
+                <div class="review-card" style="background: white; border-radius: 20px; padding: 20px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                   <div class="d-flex align-items-center gap-2 mb-3">
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
@@ -959,7 +824,7 @@
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
                     <i class="bi bi-star-fill" style="color: #ffc107;"></i>
                   </div>
-                  <p class="review-text">"Langganan servis dan beli spare part di sini. Teknisinya expert, kasih solusi tepat. Pokoknya puas!"</p>
+                  <p class="review-text" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #495057; font-style: italic;">"Langganan servis dan beli spare part di sini. Teknisinya expert, kasih solusi tepat. Pokoknya puas!"</p>
                   <div class="d-flex align-items-center gap-2 mt-3">
                     <i class="bi bi-person-circle" style="font-size: 32px; color: #6c757d;"></i>
                     <div>
@@ -970,7 +835,7 @@
                 </div>
               </div>
             </div>
-
+            
             <div class="text-center mt-4">
               <a href="https://maps.app.goo.gl/eYw7GZSw29dAznVR9" target="_blank" class="btn-part" style="background: linear-gradient(135deg, #4285f4 0%, #34a853 100%); display: inline-flex; align-items: center; gap: 8px;">
                 <i class="bi bi-google"></i> Lihat Semua Ulasan di Google Maps
@@ -980,9 +845,10 @@
         </div>
       </div>
     </section>
+
+    
   </main>
 
-  <!-- Footer -->
   <footer id="footer" class="footer dark-background">
     <div class="container">
       <div class="row gy-3">
@@ -1072,30 +938,33 @@
   </div>
 
   <script>
-    // Data Laptop
+    // Data Laptop dengan MAKSIMAL 4 GAMBAR per produk
+    // Setiap produk memiliki id unik (menggunakan indeks asli)
     const laptops = [
-      { id: 0, brand: "lenovo", name: "Lenovo Slim", spec: "Intel I5 gen 10th, RAM 8GB, SSD 256Gb", oldPrice: "9.500.000", price: "4.750.000", 
+      { id: 0, brand: "lenovo", name: "Lenovo Slim ", spec: "Intel I5 gen 10th, RAM 8GB, SSD 256Gb", oldPrice: "9.500.000", price: "4.750.000", 
         images: ["img/sekond/lenovo.jpg", "img/sekond/lenovo1.jpg", "img/sekond/lenovo2.jpg", "img/sekond/lenovo3.jpg", "img/sekond/lenovo4.jpg"] },
+
       { id: 6, brand: "hp", name: "HP 240", spec: "Intel I5-7200U, RAM 8GB, SSD 128Gb", oldPrice: "6.800.000", price: "3.550.000", 
         images: ["img/sekond/hp.jpg", "img/sekond/hp1.jpg", "img/sekond/hp2.jpg", "img/sekond/hp3.jpg"] },
-      { id: 7, brand: "hp", name: "HP 14s", spec: "Intel I5-7200U, RAM 8GB, HDD 512Gb", oldPrice: "5.900.000", price: "3.150.000", 
+      { id: 7, brand: "hp", name: "HP 14s", spec: "Intel I5-7200U, RAM 8GB, HDDD 512Gb", oldPrice: "5.900.000", price: "3.150.000", 
         images: ["img/sekond/hp14s.jpg", "img/sekond/hp14s1.jpg", "img/sekond/hp14s2.jpg", "img/sekond/hp14s3.jpg"] },
       { id: 8, brand: "hp", name: "HP", spec: "Intel N3000, RAM 8GB, HDD 500Gb", oldPrice: "5.500.000", price: "2.650.000", 
-        images: ["img/sekond/hpputih.jpg", "img/sekond/hpputih1.jpg", "img/sekond/hpputih2.jpg", "img/sekond/hpputih3.jpg"] },
-      { id: 9, brand: "hp", name: "HP 14 FHD Frameless", spec: "Intel I5 gen 8, RAM 8GB, SSD 256Gb nvme", oldPrice: "5.500.000", price: "3.900.000", 
-        images: ["img/sekond/hpfrem.jpg", "img/sekond/hpfrem1.jpg", "img/sekond/hpfrem2.jpg"] },
-      { id: 18, brand: "dell", name: "DELL", spec: "AMD Ryzen 5 3500, RAM 8GB, SSD 256Gb", oldPrice: "5.600.000", price: "4.199.000", 
+         images: ["img/sekond/hpputih.jpg", "img/sekond/hpputih1.jpg", "img/sekond/hpputih2.jpg", "img/sekond/hpputih3.jpg"] },
+      { id: 9, brand: "hp", name: "HP 14 FHD Frameless", spec: "Intel I5 gen 8(8cpu) , RAM 8GB, SSD 256Gb nvme", oldPrice: "5.500.000", price: "3.900.000", 
+       images: ["img/sekond/hpfrem.jpg", "img/sekond/hpfrem1.jpg", "img/sekond/hpfrem2.jpg"] },
+      
+		{ id: 18, brand: "dell", name: "DELL", spec: "AMD Ryzen 5 3500, RAM 8GB, SSD 256Gb", oldPrice: "5.600.000", price: "4.199.000", 
         images: ["https://placehold.co/400x300/0e1a24/white?text=Front+View", "https://placehold.co/400x300/17202a/white?text=Back+View", "https://placehold.co/400x300/0e1a24/white?text=Keyboard", "https://placehold.co/400x300/17202a/white?text=Ports"] }
     ];
 
-    // Data Spare Part
+    // Data Spare Part - HANYA 1 GAMBAR per produk
     const spareparts = [
       { name: "Charger Asus Original 19V", spec: "Connector 5.5mm", price: "280.000", img: "img/sekond/cargerasus.jpg" },
       { name: "Charger Lenovo Original 20V", spec: "Slim Tip", price: "275.000", img: "img/sekond/cargerlenovo.jpg" },
-      { name: "Charger Acer Original 19V", spec: "Connector 5.5mm", price: "280.000", img: "img/sekond/cargeracer.jpg" },
+		{ name: "Charger Acer Original 19V", spec: "Connector 5.5mm", price: "280.000", img: "img/sekond/cargeracer.jpg" },
       { name: "Charger HP Original 20V", spec: "Slim Tip", price: "275.000", img: "img/sekond/cargerhp.jpg" },
-      { name: "Charger Axioo Original 19V", spec: "Connector 5.5mm", price: "280.000", img: "img/sekond/cargeraxioo.jpg" },
-      { name: "Charger Advan Original 20V", spec: "Slim Tip", price: "275.000", img: "img/sekond/cargeradvan.jpg" }
+		{ name: "Charger Axioo Original 19V", spec: "Connector 5.5mm", price: "280.000", img: "img/sekond/cargeraxioo.jpg" },
+      { name: "Charger Advan Original 20V", spec: "Slim Tip", price: "275.000", img: "img/sekond/cargeradvan.jpg" },
     ];
 
     // Lightbox variables
@@ -1114,6 +983,7 @@
       lightboxImg.src = images[index];
       counter.textContent = `${index + 1} / ${images.length}`;
       
+      // Generate thumbnails horizontal
       thumbContainer.innerHTML = '';
       images.forEach((img, idx) => {
         const thumb = document.createElement('img');
@@ -1133,7 +1003,9 @@
       
       setTimeout(() => {
         const activeThumb = document.querySelector('.lightbox-thumb.active-thumb');
-        if (activeThumb) activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        if (activeThumb) {
+          activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
       }, 100);
       
       lightbox.classList.add('active');
@@ -1173,10 +1045,12 @@
       });
     }
 
+    // Fungsi untuk mendapatkan produk berdasarkan ID
     function getProductById(id) {
       return laptops.find(product => product.id === id);
     }
 
+    // Render Laptop - Menggunakan ID unik
     function renderLaptops(filter = "all") {
       const container = document.getElementById("productList");
       container.innerHTML = "";
@@ -1213,6 +1087,7 @@
       attachGalleryEvents();
     }
 
+    // Render Spare Part
     function renderSpareparts() {
       const container = document.getElementById("sparepartList");
       container.innerHTML = "";
@@ -1254,7 +1129,9 @@
       const productId = parseInt(this.getAttribute('data-product-id'));
       const imgIdx = parseInt(this.getAttribute('data-img-index'));
       const product = getProductById(productId);
-      if (product) openLightbox(product.images, imgIdx);
+      if (product) {
+        openLightbox(product.images, imgIdx);
+      }
     }
 
     function thumbClick(e) {
@@ -1269,7 +1146,9 @@
         mainImg.src = product.images[imgIdx];
         mainImg.setAttribute('data-img-index', imgIdx);
       }
-      if (product) openLightbox(product.images, imgIdx);
+      if (product) {
+        openLightbox(product.images, imgIdx);
+      }
     }
 
     function attachSparepartGalleryEvents() {
@@ -1281,7 +1160,9 @@
 
     function sparepartImgClick(e) {
       const partIdx = parseInt(this.getAttribute('data-part-index'));
-      if (spareparts[partIdx]) openLightbox([spareparts[partIdx].img], 0);
+      if (spareparts[partIdx]) {
+        openLightbox([spareparts[partIdx].img], 0);
+      }
     }
 
     // Hero Carousel
